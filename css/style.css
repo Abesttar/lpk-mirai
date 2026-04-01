@@ -1,0 +1,203 @@
+/* ================= GLOBAL ================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= NAVBAR (UPGRADE) ================= */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+  background: rgba(13, 71, 161, 0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* hover underline */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #fbc02d;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* CTA button navbar */
+.nav-btn {
+  padding: 8px 18px;
+  background: #fbc02d;
+  color: #0d47a1 !important;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.nav-btn:hover {
+  background: #ffd54f;
+}
+
+/* ================= HERO (BACKGROUND IMAGE + BLUR) ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* 🔥 INI TEMPAT BACKGROUND FOTO */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* GANTI GAMBAR DI SINI */
+  background: url('../assets/hero.jpg') center/cover no-repeat;
+
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+/* overlay warna branding */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(211, 47, 47, 0.7),
+    rgba(13, 71, 161, 0.7),
+    rgba(251, 192, 45, 0.5)
+  );
+  z-index: 2;
+}
+
+/* isi hero */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #fbc02d;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #fbc02d;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #0d47a1;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #08306b;
+  transform: translateY(-2px);
+}
+
+/* ================= CONTENT ================= */
+.section {
+  padding: 60px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.img-placeholder {
+  height: 200px;
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d47a1;
+  color: white;
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - LPK Mirai Crown Indonesia</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* BACKGROUND */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('assets/faq-bg.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      transform: scale(1.1);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(13,71,161,0.7),
+        rgba(211,47,47,0.6),
+        rgba(251,192,45,0.3)
+      );
+      z-index: -1;
+    }
+
+    /* HERO */
+    .faq-hero {
+      padding: 160px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .faq-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+    }
+
+    .faq-hero span {
+      color: #fbc02d;
+    }
+
+    .faq-hero p {
+      font-size: 18px;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    /* SECTION */
+    .section {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      margin: 40px auto;
+      padding: 50px 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* FAQ LIST */
+    .faq-list {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* ITEM */
+    .faq-item {
+      border-radius: 15px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-3px);
+    }
+
+    /* QUESTION */
+    .faq-question {
+      padding: 18px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #0d47a1;
+      position: relative;
+    }
+
+    .faq-question::after {
+      content: "+";
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: "-";
+    }
+
+    /* ANSWER */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      font-size: 15px;
+      color: #444;
+      line-height: 1.7;
+      transition: 0.4s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 0 20px 20px;
+    }
+
+    /* TEXT STYLE */
+    .highlight {
+      color: #d32f2f;
+      font-weight: 600;
+    }
+
+    .accent {
+      color: #0d47a1;
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-wrapper">
+    <img src="assets/logo.png" class="logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="testimoni.html">Testimoni</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="faq-hero">
+  <h1>FAQ <span>Mirai Crown</span></h1>
+  <p>Pertanyaan yang sering ditanyakan calon peserta</p>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <div class="faq-question">Apakah harus bisa Bahasa Jepang dari awal?</div>
+      <div class="faq-answer">
+        Tidak. Kami menyediakan program dari <span class="highlight">basic hingga mahir</span>, sehingga pemula tetap bisa mengikuti.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Apa itu JLPT dan JFT?</div>
+      <div class="faq-answer">
+        JLPT dan JFT adalah <span class="accent">sertifikasi resmi Bahasa Jepang</span> yang menjadi syarat utama untuk bekerja di Jepang.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Berapa lama pelatihan berlangsung?</div>
+      <div class="faq-answer">
+        Durasi tergantung program, biasanya sekitar <span class="highlight">3–6 bulan</span> hingga siap kerja.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Apakah setelah lulus langsung kerja?</div>
+      <div class="faq-answer">
+        Kami membantu <span class="accent">penyaluran kerja ke Jepang</span>, namun tetap tergantung kesiapan dan hasil seleksi peserta.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Apakah ada program online?</div>
+      <div class="faq-answer">
+        Ya, tersedia <span class="highlight">kelas online fleksibel</span> yang bisa diikuti dari mana saja.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Berapa biaya pelatihannya?</div>
+      <div class="faq-answer">
+        Biaya bervariasi tergantung program. Silakan hubungi kami untuk mendapatkan <span class="accent">detail lengkap</span>.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Apakah ada batas usia?</div>
+      <div class="faq-answer">
+        Umumnya peserta berusia <span class="highlight">18–30 tahun</span>, namun bisa disesuaikan dengan program.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Apa itu program SSW?</div>
+      <div class="faq-answer">
+        SSW (Specified Skill Worker) adalah program kerja resmi Jepang untuk tenaga kerja asing dengan <span class="accent">skill tertentu</span>.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPT INTERAKTIF -->
+<script>
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>

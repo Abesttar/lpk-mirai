@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program - LPK Mirai Crown Indonesia</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* BACKGROUND */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('assets/program-bg.jpg') center/cover no-repeat;
+      filter: blur(8px);
+      transform: scale(1.1);
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(13,71,161,0.6),
+        rgba(211,47,47,0.6),
+        rgba(251,192,45,0.3)
+      );
+      z-index: -1;
+    }
+
+    /* HERO */
+    .program-hero {
+      padding: 160px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .program-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 54px;
+    }
+
+    .program-hero span {
+      color: #fbc02d;
+    }
+
+    .program-hero p {
+      font-size: 20px;
+      margin-top: 12px;
+    }
+
+    /* SECTION */
+    .section {
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      margin: 40px auto;
+      padding: 60px 20px;
+    }
+
+    /* GRID */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 30px;
+    }
+
+    /* CARD FULL IMAGE */
+    .program-card {
+      position: relative;
+      height: 360px;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      transition: 0.4s;
+    }
+
+    .program-card:hover {
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    /* IMAGE */
+    .program-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .program-card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* SHADOW GRADIENT DARI BAWAH */
+    .program-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.3),
+        transparent
+      );
+    }
+
+    /* TEXT CONTENT */
+    .program-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      z-index: 2;
+      color: white;
+    }
+
+    .program-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .program-content p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #eee;
+    }
+
+    /* TEXT ACCENT */
+    .highlight {
+      color: #fbc02d;
+      font-weight: 600;
+    }
+
+    .accent {
+      color: #64b5f6;
+      font-weight: 600;
+    }
+
+    .italic {
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-wrapper">
+    <img src="assets/logo.png" class="logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="program.html">Program</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="testimoni.html">Testimoni</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" class="nav-btn">Daftar</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="program-hero">
+  <h1>Program <span>Kami</span></h1>
+  <p>Langkah awal menuju <b>karir internasional di Jepang</b></p>
+</section>
+
+<!-- PROGRAM -->
+<section class="section">
+  <div class="container">
+
+    <div class="program-grid">
+
+      <!-- 1 -->
+      <div class="program-card">
+        <img src="assets/program1.jpg">
+        <div class="program-content">
+          <h3>Bahasa Jepang Intensif</h3>
+          <p>
+            Program <span class="highlight">basic hingga mahir</span> untuk 
+            <span class="accent">JLPT & JFT</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="program-card">
+        <img src="assets/program2.jpg">
+        <div class="program-content">
+          <h3>Persiapan SSW</h3>
+          <p>
+            Fokus <span class="highlight">skill kerja Jepang</span> dan 
+            <span class="accent">mental industri</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="program-card">
+        <img src="assets/program3.jpg">
+        <div class="program-content">
+          <h3>Penyaluran Kerja Jepang</h3>
+          <p>
+            Akses ke <span class="highlight">perusahaan terpercaya</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="program-card">
+        <img src="assets/program4.jpg">
+        <div class="program-content">
+          <h3>Interview & Culture</h3>
+          <p>
+            <span class="highlight">Simulasi interview</span> & budaya kerja Jepang.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="program-card">
+        <img src="assets/program5.jpg">
+        <div class="program-content">
+          <h3>Online Class</h3>
+          <p>
+            Belajar <span class="highlight">fleksibel</span> & 
+            <span class="accent">interaktif</span>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
